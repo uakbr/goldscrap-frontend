@@ -1,24 +1,45 @@
 <html>
 <head>
     <title>
-        Gold Finder - {% block title %}{% endblock %}
+        GoldScrap - {% block title %}{% endblock %}
     </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
+            integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg=="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+
+
+
+    <script>
+    </script>
+
+    {% block head%}{% endblock%}
 
 </head>
 <body>
+
 {% block bodycontent %}
 
-
+{%endblock %}
+</body>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+{% block restcontent %}
 
 {%endblock %}
-<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-<script
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
-<script src="semantic/dist/semantic.min.js"></script>
-</body>
+<script type="text/javascript" src="{{ url_for('.static', filename='js/price_table.js') }}"></script>
+<script>
 
-
+    tippy('[data-tippy-content]');
+</script>
 
 </html>

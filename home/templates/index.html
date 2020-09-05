@@ -1,5 +1,45 @@
 {% extends "base.html" %}
 {%block title%} Home Page {%endblock%}
+
+{%block head%}
+
+<script>
+
+
+</script>
+
+{%endblock%}
+
 {%block bodycontent%}
-<h1>Hello</h1>
+<section class="section">
+    <div class="container">
+        <h1 class="title is-size-1">
+            Gold Scrap
+        </h1>
+        <br>
+        <div id="app" class="columns" style>
+            <game-price-table game_title="OSRS" v-bind:prices="pricesosrs"></game-price-table>
+            <game-price-table game_title="RS3" v-bind:prices="pricesrs3"></game-price-table>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+<span data-tippy-content="Tooltip" tabindex="0">
+  <button disabled>Text</button>
+</span>
+
 {% endblock %}
+
+
+{% block restcontent %}
+
+<script>
+
+
+    var prices_obj = {{items_json | safe}}
+
+</script>
+
+{%endblock %}
