@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/PycharmProjects/flask_test/.idea/flask_test.iml" filepath="$USER_HOME$/PycharmProjects/flask_test/.idea/flask_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/frontend.iml" filepath="$PROJECT_DIR$/.idea/frontend.iml" />
     </modules>
   </component>

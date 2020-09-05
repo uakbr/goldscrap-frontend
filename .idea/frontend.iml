@@ -6,13 +6,16 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (frontend)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="flask_test" />
     <orderEntry type="library" name="vue" level="application" />
     <orderEntry type="library" name="jquery-3.1.1" level="application" />
     <orderEntry type="library" name="axios" level="application" />
     <orderEntry type="library" name="Chart.js" level="application" />
     <orderEntry type="library" name="moment.js" level="application" />
     <orderEntry type="library" name="bulma" level="application" />
+  </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="C:\Users\guilh\Documents\projectos_hobby\upgold\src\frontend\requirements.txt" />
+    <option name="removeUnused" value="true" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">
