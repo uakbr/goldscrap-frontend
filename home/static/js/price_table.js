@@ -22,7 +22,8 @@ Vue.component('game-price-table', {
 
             <span v-bind:data-tippy-content="price.FetchTime" tabindex="0">
                 <td v-if="price == prices[0]" >
-                <strong>[[price.PriceValue]]</strong></td>
+                <i class="fas fa-thumbs-up"></i>
+                <strong>  [[price.PriceValue]]</strong></td>
                 <td v-else>[[price.PriceValue]]</td>
             </span>
             <td v-if="price == prices[0]" class="has-text-primary">[[price.Seller]]</td>
