@@ -6,17 +6,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-            integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
-            crossorigin="anonymous"></script>
-    <!-- development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script type="text/javascript" src="{{ url_for('.static', filename='external/vue.js') }}"></script>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
-            integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg=="
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script type="text/javascript" src="{{ url_for('.static', filename='external/Chart.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('.static', filename='external/bulma.css') }}">
 
     <script src="https://kit.fontawesome.com/43abd93375.js" crossorigin="anonymous"></script>
 
