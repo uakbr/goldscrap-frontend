@@ -1,6 +1,7 @@
 from flask import Flask, redirect, url_for, render_template
 from home.views import home
 from dashboard.views import dashboard
+from stats.views import stats
 import settings
 import os
 

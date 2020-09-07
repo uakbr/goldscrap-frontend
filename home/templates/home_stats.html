@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{%block title%} Home Page {%endblock%}
+
+{%block head%}
+
+<script>
+
+
+</script>
+
+{%endblock%}
+
+
+{%block bodycontent%}
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <p class="subtitle">
+                    <strong>OSRS </strong> Daily Stats
+                </p>
+                <canvas id="dailyAverageChartOSRS" width="400" height="400"></canvas>
+            </div>
+            <div class="column">
+                <p class="subtitle">
+                    <strong>RS3</strong> Daily Stats
+                </p>
+                <canvas id="dailyAverageChartRS3" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+<p></p>
+{% endblock %}
+
+
+{% block restcontent %}
+
+
+<script>
+    var dailyData = {{dailyData_json | safe}}
+</script>
+<script type="text/javascript" src="{{ url_for('.static', filename='js/price_charts.js') }}"></script>
+{%endblock %}

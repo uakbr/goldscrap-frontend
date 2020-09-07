@@ -5,11 +5,11 @@ Vue.component('game-price-table', {
     props:["game_title", "prices"],
     template: `
     
-<div class="column">
+<div class="column table-container">
     <p class="subtitle">
         <strong>[[game_title]]</strong> prices
     </p>
-    <table class="table">
+    <table class="table is-striped is-narrow">
         <thead>
         <tr>
             <th>Price</th>
