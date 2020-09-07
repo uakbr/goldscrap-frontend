@@ -9,7 +9,7 @@ Vue.component('game-price-table', {
     <p class="subtitle">
         <strong>[[game_title]]</strong> prices
     </p>
-    <table class="table is-striped is-narrow">
+    <table class="table">
         <thead>
         <tr>
             <th>Price</th>
