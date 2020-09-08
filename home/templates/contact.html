@@ -20,7 +20,7 @@
             Send me a message</h4>
         <textarea class="textarea" placeholder="e.g. It would be cool if you added this...."
                   id="messageText"></textarea>
-        <button class="button is-primary" onclick="sendMessage()">Send!</button>
+        <button class="button is-primary" onclick="sendMessage()" id="buttonSubmit">Send!</button>
 
         <br>
     </div>
@@ -39,7 +39,11 @@
         let message = document.getElementById("messageText").value
         let name = document.getElementById("nameText").value
 
+        document.getElementById("messageText").value = ""
+        document.getElementById("nameText").value = ""
+
         let finalMessage = `By:${name}\n${message}`
+
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", URL, true);
@@ -48,6 +52,7 @@
             'content': finalMessage,
             'username': 'Site-Message',
         }));
+        document.getElementById("buttonSubmit").appendChild("<p>Sent!</p>")
     }
 
 </script>
