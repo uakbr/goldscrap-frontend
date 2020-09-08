@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{%block title%} Home Page {%endblock%}
+
+{%block head%}
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+{%endblock%}
+
+{%block bodycontent%}
+<section class="section">
+    <div class="container">
+        <h1 class="title">
+            Contact
+        </h1>
+
+        <h4>Your Name/Email/Other way for me to talk with you</h4>
+        <input class="input" type="text" placeholder="eg: potatoman@gmail.com" id="nameText">
+        <br>
+        <h4>
+            Send me a message</h4>
+        <textarea class="textarea" placeholder="e.g. It would be cool if you added this...."
+                  id="messageText"></textarea>
+        <button class="button is-primary" onclick="sendMessage()">Send!</button>
+
+        <br>
+    </div>
+</section>
+
+
+{% endblock %}
+
+
+{% block restcontent %}
+
+<script>
+    const URL = "https://discordapp.com/api/webhooks/752886482196234303/_MMGovHDQXGogz4EDMCoOXOiQ8t3VfbOGwzduhvCUcISGQhCLGg5uDBs_FzM29XWd3MW"
+
+    function sendMessage() {
+        let message = document.getElementById("messageText").value
+        let name = document.getElementById("nameText").value
+
+        let finalMessage = `By:${name}\n${message}`
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", URL, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            'content': finalMessage,
+            'username': 'Site-Message',
+        }));
+    }
+
+</script>
+
+{%endblock %}

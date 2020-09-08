@@ -12,6 +12,7 @@
     <orderEntry type="library" name="Chart.js" level="application" />
     <orderEntry type="library" name="moment.js" level="application" />
     <orderEntry type="library" name="bulma" level="application" />
+    <orderEntry type="library" name="axios" level="application" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="C:\Users\guilh\Documents\projectos_hobby\upgold\src\frontend\requirements.txt" />
