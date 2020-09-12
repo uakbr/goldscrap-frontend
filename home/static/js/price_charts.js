@@ -55,7 +55,7 @@ var osrsDataStatsChart = new Chart(ctxOSRS, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: false
                 }
             }]
         }
@@ -111,7 +111,7 @@ var rs3DataStatsChart = new Chart(ctxRS3, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: false
                 }
             }]
         }
