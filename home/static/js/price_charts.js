@@ -32,6 +32,7 @@ var osrsDataStatsChart = new Chart(ctxOSRS, {
         datasets: [{
             label: 'Daily Average #',
             data: osrsDataStats.average,
+            lineTension: 0,
             backgroundColor: "rgb(153, 102, 255)",
             borderColor: "rgb(153, 102, 255)",
             fill: false,
@@ -39,6 +40,7 @@ var osrsDataStatsChart = new Chart(ctxOSRS, {
             {
                 label: 'Daily Minimum #',
                 data: osrsDataStats.minimum,
+                lineTension: 0,
                 backgroundColor: "rgb(75,192,192)",
                 borderColor: "rgb(75, 192, 192)",
                 fill: false,
@@ -46,6 +48,7 @@ var osrsDataStatsChart = new Chart(ctxOSRS, {
             {
                 label: 'Daily Maximum #',
                 data: osrsDataStats.maximum,
+                lineTension: 0,
                 backgroundColor: "rgb(255, 99, 132)",
                 borderColor: "rgb(255, 99, 132)",
                 fill: false,
@@ -57,8 +60,9 @@ var osrsDataStatsChart = new Chart(ctxOSRS, {
                 ticks: {
                     beginAtZero: false
                 }
-            }]
-        }
+            }],
+        },
+
     }
 });
 
@@ -88,6 +92,7 @@ var rs3DataStatsChart = new Chart(ctxRS3, {
         datasets: [{
             label: 'Daily Average #',
             data: rs3DataStats.average,
+            lineTension: 0,
             backgroundColor: "rgb(153, 102, 255)",
             borderColor: "rgb(153, 102, 255)",
             fill: false,
@@ -95,6 +100,7 @@ var rs3DataStatsChart = new Chart(ctxRS3, {
             {
                 label: 'Daily Minimum #',
                 data: rs3DataStats.minimum,
+                lineTension: 0,
                 backgroundColor: "rgb(75, 192, 192)",
                 borderColor: "rgb(75, 192, 192)",
                 fill: false,
@@ -102,6 +108,7 @@ var rs3DataStatsChart = new Chart(ctxRS3, {
             {
                 label: 'Daily Maximum #',
                 data: rs3DataStats.maximum,
+                lineTension: 0,
                 backgroundColor: "rgb(255, 99, 132)",
                 borderColor: "rgb(255, 99, 132)",
                 fill: false,
