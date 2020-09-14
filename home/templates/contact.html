@@ -2,7 +2,6 @@
 {%block title%} Home Page {%endblock%}
 
 {%block head%}
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 {%endblock%}
 
@@ -32,29 +31,5 @@
 
 {% block restcontent %}
 
-<script>
-    const URL = "https://discordapp.com/api/webhooks/752886482196234303/_MMGovHDQXGogz4EDMCoOXOiQ8t3VfbOGwzduhvCUcISGQhCLGg5uDBs_FzM29XWd3MW"
-
-    function sendMessage() {
-        let message = document.getElementById("messageText").value
-        let name = document.getElementById("nameText").value
-
-        document.getElementById("messageText").value = ""
-        document.getElementById("nameText").value = ""
-
-        let finalMessage = `By:${name}\n${message}`
-
-
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", URL, true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify({
-            'content': finalMessage,
-            'username': 'Site-Message',
-        }));
-        document.getElementById("buttonSubmit").appendChild("<p>Sent!</p>")
-    }
-
-</script>
 
 {%endblock %}
