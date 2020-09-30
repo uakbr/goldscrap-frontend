@@ -7,7 +7,7 @@ import os
 
 settings.load_config()
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", static_url_path="")
 app.register_blueprint(home, url_prefix="/home")
 app.register_blueprint(dashboard, url_prefix="/dashboard")
 
