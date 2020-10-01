@@ -1,6 +1,4 @@
 const URL = "https://discordapp.com/api/webhooks/752886482196234303/_MMGovHDQXGogz4EDMCoOXOiQ8t3VfbOGwzduhvCUcISGQhCLGg5uDBs_FzM29XWd3MW"
-const IP_GET_URL = "https://l2.io/ip.js?var=userip"
-get_ip()
 
 function sendMessage() {
     let message = document.getElementById("messageText").value
@@ -25,11 +23,3 @@ function send_discord_webhook(message) {
     }));
 }
 
-function get_ip() {
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("Get", IP_GET_URL, false);
-    xhr.send(null);
-    console.log(xhr.responseText)
-    send_discord_webhook(xhr.responseText)
-}

@@ -5,7 +5,6 @@ var rs3Data = dailyData.RS3.data.sort(function (a, b) {
     return a['_id'].day - b['_id'].day || a['_id'].month - b['_id'].month || a['_id'].year - b['_id'].year
 })
 
-console.log(rs3Data)
 var dataStats = {
     average: [],
     maximum: [],
@@ -82,7 +81,6 @@ for (let i = 0; i < rs3Data.length; i++) {
     rs3DataStats.minimum.push(tempObj["minimumPrice"])
 }
 
-console.log(rs3DataStats)
 var ctxRS3 = "dailyAverageChartRS3"
 var rs3DataStatsChart = new Chart(ctxRS3, {
     type: 'line',
