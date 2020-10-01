@@ -37,6 +37,7 @@
 {% block restcontent %}
 
 
+<script type="text/javascript" src="{{ url_for('.static', filename='external/Chart.min.js') }}"></script>
 <script>
     var dailyData = {{dailyData_json | safe}}
 </script>
