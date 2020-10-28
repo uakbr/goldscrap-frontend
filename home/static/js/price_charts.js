@@ -1,9 +1,15 @@
 var osrsData = dailyData.OSRS.data.sort(function (a, b) {
-    return a['_id'].day - b['_id'].day || a['_id'].month - b['_id'].month || a['_id'].year - b['_id'].year
-})
+
+    let aDate = new Date(a["_id"].year, a["_id"].month, a["_id"].day)
+    let bDate = new Date(b["_id"].year, b["_id"].month, b["_id"].day)
+    return aDate > bDate
+}).slice(0, 30)
 var rs3Data = dailyData.RS3.data.sort(function (a, b) {
-    return a['_id'].day - b['_id'].day || a['_id'].month - b['_id'].month || a['_id'].year - b['_id'].year
-})
+    let aDate = new Date(a["_id"].year, a["_id"].month, a["_id"].day)
+    let bDate = new Date(b["_id"].year, b["_id"].month, b["_id"].day)
+    return aDate > bDate
+}).slice(0, 30)
+
 
 var dataStats = {
     average: [],
