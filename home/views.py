@@ -5,7 +5,7 @@ import requests_cache
 
 home = Blueprint('home', __name__, template_folder="templates", static_folder="static")
 
-requests_cache.install_cache('api_requests_cache', backend='sqlite', expire_after=290)
+requests_cache.install_cache('api_requests_cache', backend='memory', expire_after=290)
 
 
 @home.route('/')
