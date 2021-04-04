@@ -14,8 +14,8 @@ def home_index():
     osrs_request = requests.get(latest_prices_url, params={'game': "OSRS"})
     rs_request = requests.get(latest_prices_url, params={'game': "RS3"})
 
-    osrs_sorted = sorted(osrs_request.json()["data"], key=lambda k: float(k['PriceValue'])) 
-    rs_sorted = sorted(rs_request.json()["data"], key=lambda k: float(k['PriceValue'])) 
+    osrs_sorted = sorted(osrs_request.json()["data"], key=lambda k: float(k['PriceValue']))
+    rs_sorted = sorted(rs_request.json()["data"], key=lambda k: float(k['PriceValue']))
 
     data = {
         "OSRS": osrs_sorted,
@@ -40,12 +40,12 @@ def stats_home():
 
     return render_template("home_stats.html", dailyData_json=daily_stats)
 
+
 @home.route('/about')
 def about_home():
-
     return render_template("about.html")
+
 
 @home.route('/contact')
 def contact_home():
-
     return render_template("contact.html")
