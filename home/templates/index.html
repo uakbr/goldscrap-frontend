@@ -11,15 +11,55 @@
 {%endblock%}
 
 {%block bodycontent%}
+
+
 <section class="section">
     <div class="container">
 
         <br>
-        <div id="app" class="columns" style>
-            <game-price-table game_title="OSRS" v-bind:prices="pricesosrs"></game-price-table>
-            <game-price-table game_title="RS3" v-bind:prices="pricesrs3"></game-price-table>
-        </div>
+	<div class="columns">
+{% for key, segment in items_json.items() %}
+	<div class="column table-container">
+	    <p class="subtitle">
+	    <strong>{{ key }}</strong> prices
+	    </p>
+	    <table class="table">
+		<thead>
+		<tr>
+		    <th>Price</th>
+		    <th>Seller</th>
+		    <th>Site</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% for price in segment %}
 
+		<tr>
+
+		    <span v-bind:data-tippy-content="price.FetchTime" tabindex="0">
+		    {% if loop.index == 1  %}
+			<td><i class="fas fa-thumbs-up"></i>
+			<strong>  {{price.PriceValue}}</strong></td>
+		    {% else %}
+			<td >{{price.PriceValue}}</td>
+		    {% endif %}
+		    </span>
+		    {% if loop.index == 1  %}
+		    <td class="has-text-primary">{{price.Seller}}</td>
+		    {% else %}
+		    <td>{{price.Seller}}</td>
+		    {% endif %}
+		    <td><a v-bind:href="price.SiteURL">{{price.siteName}}</a></td>
+		</tr>
+
+		{% endfor %}
+		</tbody>
+
+	    </table>
+	</div>
+
+    {% endfor %}
+    </div>
     </div>
     </div>
 </section>
@@ -31,12 +71,5 @@
 
 {% block restcontent %}
 
-<script>
 
-
-    var prices_obj = {{items_json | safe}}
-
-</script>
-
-<script type="text/javascript" src="{{ url_for('.static', filename='js/price_table.js') }}"></script>
 {%endblock %}
