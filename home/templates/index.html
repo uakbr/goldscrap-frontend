@@ -35,13 +35,14 @@
 		{% for price in segment %}
 
 		<tr>
-
-		    <span v-bind:data-tippy-content="price.FetchTime" tabindex="0">
+		    <td>
+		   <span data-tippy-content="{{price.FetchTime}}" tabindex="0"> 
 		    {% if loop.index == 1  %}
-			<td><i class="fas fa-thumbs-up"></i>
+			<i class="fas fa-thumbs-up"></i>
+
 			<strong>  {{price.PriceValue}}</strong></td>
 		    {% else %}
-			<td >{{price.PriceValue}}</td>
+			 {{price.PriceValue}}</td>
 		    {% endif %}
 		    </span>
 		    {% if loop.index == 1  %}
@@ -49,7 +50,7 @@
 		    {% else %}
 		    <td>{{price.Seller}}</td>
 		    {% endif %}
-		    <td><a v-bind:href="price.SiteURL">{{price.siteName}}</a></td>
+		    <td><a href="{{price.SiteURL}}">{{price.siteName}}</a></td>
 		</tr>
 
 		{% endfor %}
