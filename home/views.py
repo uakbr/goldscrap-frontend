@@ -47,12 +47,6 @@ def stats_home():
 
     return render_template("home_stats.html", dailyData_json=daily_stats)
 
-
-@home.route('/about')
-def about_home():
-    return render_template("about.html")
-
-
 @home.route('/contact')
 def contact_home():
     return render_template("contact.html")

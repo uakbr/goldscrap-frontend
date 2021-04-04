@@ -2,6 +2,8 @@
 {%block title%} Home{%endblock%}
 
 {%block head%}
+<meta name="description"
+      content="Find the cheapest Runescape 3 and OSRS gold. Compare the Prices between the most popular Gold Selling Websites. GoldScrap.io finds the best Price for you.">
 
 {%endblock%}
 
@@ -21,7 +23,7 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Price</th>
+                        <th>Price (USD)</th>
                         <th>Seller</th>
                         <th>Site</th>
                     </tr>
@@ -57,6 +59,62 @@
             {% endfor %}
         </div>
     </div>
+    <br>
+    <br>
+    <div class="container">
+        <h1 class="title">
+            About
+        </h1>
+        <br>
+        <div class="content">
+            <h1>What is the purpose of this site?</h1>
+            <p>
+                The purpose of this site is to merge all the prices into one so people trying to buy gold have the
+                possibility to compare prices and services.
+                Also, this might increase the price competition between sellers, since now they can see their prices
+                compared to others.
+            </p>
+
+            <h1>What does each column mean?</h1>
+            <ul>
+                <li><strong>Price</strong> is the price per million of in-game currency. For example, if it says "0.59"
+                    it means that the seller is selling each in-game million coins for 0.59 USD.
+                </li>
+                <li><strong>Seller</strong> is the name of the seller in that website. Some websites have multiple
+                    sellers, some are owned by the seller itself.
+                </li>
+                <li><strong>Site</strong></li>
+                is both the name and a link to the website that has that price.
+            </ul>
+            <h1>How are the prices fetched?</h1>
+            <p>
+                Every Hour I run a program (called a scraper) that loads the target website and finds the price that the
+                seller is selling for.
+            </p>
+
+
+            <h1>Do I plan improving the website/adding more stuff?</h1>
+            <p>
+                The website is far from finished. Planning on adding statistics, "Selling" price (which not every site
+                has it public), real time updating the price, a way for sellers to change the price here manually and
+                possibly sort the sellers by trust.
+
+            </p>
+            <h1>Do I plan on monetizing?</h1>
+            <p>
+                I don't know yet.
+                Planning on placing ads, selling the access to my database/API or making a Discord bot and sell that.
+                If you want to make an offer I'm all ears. Just contact me on the <a href="/home/contact">contact</a>
+                page.
+            </p>
+            <h1>Is this website Open Source?</h1>
+            <p>
+                So far only the Frontend of this project is Open Source, and I don't plan on Open Sourcing the Scrapers
+                or the API source until I decide how I'm going to monetize this website.
+                If you want to check the progress or contribute to the Frontend part of this project you can check <a
+                    href="https://github.com/Gabulhas/goldscrap-frontend">Here</a>.
+            </p>
+        </div>
     </div>
 </section>
 

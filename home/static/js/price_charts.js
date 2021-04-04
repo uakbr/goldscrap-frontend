@@ -11,6 +11,8 @@ var rs3Data = dailyData.RS3.data.sort(function (a, b) {
 }).slice(1).slice(-30)
 
 
+var graphColor = "rgb(0, 209, 178)"
+
 var dataStats = {
     average: [],
     maximum: [],
@@ -21,7 +23,7 @@ osrsDataStats = dataStats
 
 for (let i = 0; i < osrsData.length; i++) {
     const tempObj = osrsData[i]
-    const label = `${tempObj["_id"].year}/${tempObj["_id"].month}/${tempObj["_id"].day}`
+    const label = `${tempObj["_id"].month}/${tempObj["_id"].day}`
     osrsDataStats.labels.push(label)
     osrsDataStats.average.push(tempObj["averagePrice"])
 }
@@ -36,8 +38,8 @@ var osrsDataStatsChart = new Chart(ctxOSRS, {
             label: 'Daily Average #',
             data: osrsDataStats.average,
             lineTension: 0,
-            backgroundColor: "rgb(153, 102, 255)",
-            borderColor: "rgb(153, 102, 255)",
+            backgroundColor: graphColor,
+            borderColor: graphColor,
             fill: false,
         }
         ]
@@ -63,7 +65,7 @@ let rs3DataStats = dataStats
 
 for (let i = 0; i < rs3Data.length; i++) {
     const tempObj = rs3Data[i]
-    const label = `${tempObj["_id"].year}/${tempObj["_id"].month}/${tempObj["_id"].day}`
+    const label = `${tempObj["_id"].month}/${tempObj["_id"].day}`
     rs3DataStats.labels.push(label)
     rs3DataStats.average.push(tempObj["averagePrice"])
 }
@@ -78,8 +80,8 @@ var rs3DataStatsChart = new Chart(ctxRS3, {
             label: 'Daily Average #',
             data: rs3DataStats.average,
             lineTension: 0,
-            backgroundColor: "rgb(153, 102, 255)",
-            borderColor: "rgb(153, 102, 255)",
+            backgroundColor: graphColor,
+            borderColor: graphColor,
             fill: false,
         }]
     },
