@@ -33,16 +33,9 @@ def stats_home():
     rs_request_daily = requests.get(latest_prices_url,
                                     params={'game': "RS3", 'recurrence': 'daily', 'stat': 'avg'})
 
-    osrs_monthly_average = sum([x["averagePrice"] for x in osrs_request_daily.json()["data"]]) / len(
-        osrs_request_daily.json()["data"])
-    rs_monthly_average = sum([x["averagePrice"] for x in rs_request_daily.json()["data"]]) / len(
-        rs_request_daily.json()["data"])
-
     daily_stats = {
         "OSRS": osrs_request_daily.json(),
-        "OSRS_AVERAGE": "{:.3f}".format(osrs_monthly_average),
         "RS3": rs_request_daily.json(),
-        "RS3_AVERAGE": "{:.3f}".format(rs_monthly_average)
     }
 
     return render_template("home_stats.html", dailyData_json=daily_stats)
